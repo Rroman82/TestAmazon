@@ -18,8 +18,13 @@ public class TestAmazon extends TestInit {
         Assert.assertTrue(amazonHomePage.getBasket().isDisplayed());
         Assert.assertTrue(amazonHomePage.getSearch().isDisplayed());
         Assert.assertTrue(amazonHomePage.getSearchImageBtn().isDisplayed());
+        Assert.assertTrue(amazonHomePage.getChooseCountry().isDisplayed());
+        Assert.assertTrue(amazonHomePage.getSearchFieldMonik().isDisplayed());
+
+
 
         AmazonResultsPage amazonSerchResultsPage = new AmazonResultsPage(driver);
+
     }
 
     @Test
@@ -39,4 +44,21 @@ public class TestAmazon extends TestInit {
         amazonHomePage.getSearchField().sendKeys("Pen");
         amazonHomePage.getEnterBtn().click();
     }
+    @Test
+    public void ChooseCountry(){
+        AmazonHomePage amazonHomePage = new AmazonHomePage(driver);
+        amazonHomePage.navigateAmazon();
+
+        amazonHomePage.getChooseCountry().sendKeys("");
+        amazonHomePage.getEnterBtn().click();
+    }
+    @Test
+    public void SearchFieldMonik() {
+        AmazonHomePage amazonHomePage = new AmazonHomePage(driver);
+        amazonHomePage.navigateAmazon();
+
+        amazonHomePage.getSearchField().sendKeys("Monitor");
+        amazonHomePage.getEnterBtn().click();
+    }
+
 }
