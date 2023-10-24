@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestInit {
 
-     public WebDriver driver;
+    public WebDriver driver;
 
     @BeforeMethod
     public void setup() {
@@ -18,12 +18,11 @@ public class TestInit {
         driver = new ChromeDriver(options);
     }
 
-
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
+    }
 
-        }
     public void sleep(int s) {
         try {
             Thread.sleep(s * 1000);
@@ -31,10 +30,12 @@ public class TestInit {
             e.printStackTrace();
         }
     }
-        public void goToGoogle(){driver.get ("https://www.google.com/");
-        }
-public WebElement getSearchField(){
-            return driver.findElement(By.xpath(""));
-        }
-}
 
+    public void goToGoogle() {
+        driver.get("https://www.google.com/");
+    }
+
+    public WebElement getSearchField() {
+        return driver.findElement(By.xpath(""));
+    }
+}

@@ -8,15 +8,10 @@ import org.testng.annotations.Test;
 
 public class TestAmazon extends TestInit {
 
-    //@Test
-    //public void one(){
-    //HomePage homePage = new HomePage(driver);
-    //homePage.navigate();
     @Test
     public void checkHeader() {
         AmazonHomePage amazonHomePage = new AmazonHomePage(driver);
         amazonHomePage.navigateAmazon();
-
 
         Assert.assertTrue(amazonHomePage.getChooseLang().isDisplayed());
         Assert.assertTrue(amazonHomePage.getReturn().isDisplayed());
@@ -25,7 +20,6 @@ public class TestAmazon extends TestInit {
         Assert.assertTrue(amazonHomePage.getSearchImageBtn().isDisplayed());
 
         AmazonResultsPage amazonSerchResultsPage = new AmazonResultsPage(driver);
-        //Assert.assertTrue(amazonSerchResultsPage.getResultsField().isDisplayed());
     }
 
     @Test
@@ -35,9 +29,6 @@ public class TestAmazon extends TestInit {
 
         amazonHomePage.getSearchField().sendKeys("hat");
         amazonHomePage.getEnterBtn().click();
-        //sleep(2);
-//        AmazonResultsPage amazonSerchResultsPage = new AmazonResultsPage(driver);
-//        Assert.assertTrue(amazonSerchResultsPage.getResultsFieldd().isDisplayed());
     }
 
     @Test
@@ -47,8 +38,5 @@ public class TestAmazon extends TestInit {
 
         amazonHomePage.getSearchField().sendKeys("Pen");
         amazonHomePage.getEnterBtn().click();
-
-        //AmazonResultsPage amazonSerchResultsPage = new AmazonResultsPage(driver);
-        //Assert.assertTrue(amazonSerchResultsPage.getResultsFieldd().isDisplayed());
     }
 }
