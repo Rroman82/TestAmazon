@@ -1,17 +1,13 @@
-package tests;
+package pageObject.test;
 
-import PageObject.AmazonHomePage;
-import PageObject.AmazonResultsPage;
-import PageObject.HomePage;
+import pageObject.PageObject.AmazonHomePage;
+import pageObject.PageObject.AmazonResultsPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class TestAmazon extends TestInit {
     //    public List<WebElement> listCountry(){
@@ -48,18 +44,21 @@ public class TestAmazon extends TestInit {
     public void checkSeach() {
         AmazonHomePage amazonHomePage = new AmazonHomePage(driver);
         amazonHomePage.navigateAmazon();
-
+        Assert.assertTrue(amazonHomePage.getSearch().isDisplayed());
         amazonHomePage.getSearchField().sendKeys("hat");
         amazonHomePage.getEnterBtn().click();
+        Assert.assertTrue(amazonHomePage.getSearch().isDisplayed());
+
     }
 
     @Test
     public void checkSeachPen() {
         AmazonHomePage amazonHomePage = new AmazonHomePage(driver);
         amazonHomePage.navigateAmazon();
-
+        Assert.assertTrue(amazonHomePage.getSearchField().isDisplayed());
         amazonHomePage.getSearchField().sendKeys("Pen");
         amazonHomePage.getEnterBtn().click();
+
     }
 
     @Test
@@ -100,8 +99,7 @@ public class TestAmazon extends TestInit {
 //        sleep(10);
 
         //List<String> country = listCountry().stream("Italy")
-
-        //Assert.assertTrue(amazonHomePage.getChooseCountry().isDisplayed());
+        Assert.assertTrue(amazonHomePage.getChooseCountry().isDisplayed());
     }
 
 
@@ -123,7 +121,7 @@ public class TestAmazon extends TestInit {
         amazonHomePage.btnLang().click();
         amazonHomePage.listLanguages().get(3).click();
         sleep(3);
-
+        Assert.assertTrue(amazonHomePage.getChooseLang().isDisplayed());
     }
 
     @Test
@@ -157,6 +155,8 @@ public class TestAmazon extends TestInit {
 //              } else {
 //         System.out.println("The number is not between 50 and 100");
 //     }
+
+        Assert.assertTrue(amazonHomePage.priceLag().isDisplayed());
     }
 @Test
     public void SelectAll() {
@@ -167,6 +167,14 @@ public class TestAmazon extends TestInit {
         sleep(7);
         amazonHomePage.listAll().click();
         sleep(7);
-
+    Assert.assertTrue(amazonHomePage.listAll().isDisplayed());
+    }
+    @Test
+    public void mouseMove(){
+        AmazonHomePage amazonHomePage =new AmazonHomePage(driver);
+        amazonHomePage.navigateAmazon();
+        moveToElement(amazonHomePage.getBasket());
+        sleep(7);
+        //Assert.assertTrue(amazonHomePage.getMouseMove().isDisplayed());
     }
 }

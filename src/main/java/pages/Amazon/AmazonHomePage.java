@@ -1,4 +1,4 @@
-package PageObject;
+package pageObject.PageObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -101,7 +101,8 @@ public WebElement priceLag(){
         return driver.findElement(By.xpath("//a[@class='LinkFilterOption-module__linkFilterOption_k3Xp4bgxEaBmcgTA0UAxc']//span[text()='$50 to $100']"));
          }
 
-    }
+
+}
 
 
 

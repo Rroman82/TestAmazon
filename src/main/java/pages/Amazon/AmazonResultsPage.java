@@ -1,9 +1,8 @@
-package PageObject;
+package pageObject.PageObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import tests.TestInit;
 
 public class AmazonResultsPage extends BasePage {
 

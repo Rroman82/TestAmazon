@@ -1,11 +1,7 @@
-package tests;
+package pageObject.test;
 
-import PageObject.AmazonHomePage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import pageObject.PageObject.AmazonHomePage;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 public class TestWebDriver extends TestInit {
 
