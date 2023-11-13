@@ -1,7 +1,7 @@
-package pageObject.test;
+package testAmazon;
 
-import pageObject.PageObject.AmazonHomePage;
-import pageObject.PageObject.AmazonResultsPage;
+import pages.Amazon.AmazonHomePage;
+import pages.Amazon.AmazonResultsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;

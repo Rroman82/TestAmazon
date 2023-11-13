@@ -1,7 +1,7 @@
-package rozetka.Tests;
+package testsRzk;
 
-import pageObject.test.TestInit;
-import rozetka.Pages.RozetHPElements;
+import testAmazon.TestInit;
+import pages.Rzk.RozetHPElements;
 import org.testng.annotations.Test;
 
 public class RozetCatalogTest extends TestInit {

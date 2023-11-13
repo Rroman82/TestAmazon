@@ -1,4 +1,4 @@
-package pageObject.PageObject;
+package pages.Amazon;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -77,29 +77,34 @@ public class AmazonHomePage extends BasePage {
         return driver.findElements(By.xpath("//ul[@class='a-nostyle a-list-link']"));
     }
 
-    public WebElement clickOnFieldWithName(String nameCity){
+    public WebElement clickOnFieldWithName(String nameCity) {
         return waitUntilElementToBeLocated(String.format("//ul[@class='a-nostyle a-list-link']//li//a[contains(text(),'%s')]", nameCity));
     }
-    public List<WebElement> listLanguages(){
+
+    public List<WebElement> listLanguages() {
         return driver.findElements(By.xpath("//i[@class= 'a-icon a-icon-radio']"));
     }
 
-public WebElement btnLang(){
+    public WebElement btnLang() {
         return driver.findElement(By.xpath("//a[@id='icp-nav-flyout']"));
-}
-public WebElement deals() {
-    return driver.findElement(By.xpath("//a[@class='nav-a  '][1]"));
-}
+    }
+
+    public WebElement deals() {
+        return driver.findElement(By.xpath("//a[@class='nav-a  '][1]"));
+    }
+
     public WebElement btnAll() {
         return driver.findElement(By.xpath("//a[@id='nav-hamburger-menu']"));
     }
-    public WebElement listAll(){
+
+    public WebElement listAll() {
         return driver.findElement(By.xpath("//a[@class='hmenu-item'][text()='Customer Service']"));
 
-        }
-public WebElement priceLag(){
+    }
+
+    public WebElement priceLag() {
         return driver.findElement(By.xpath("//a[@class='LinkFilterOption-module__linkFilterOption_k3Xp4bgxEaBmcgTA0UAxc']//span[text()='$50 to $100']"));
-         }
+    }
 
 
 }

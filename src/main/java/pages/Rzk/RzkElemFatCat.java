@@ -1,13 +1,15 @@
-package rozetka.Pages;
+package pages.Rzk;
 
-import pageObject.PageObject.BasePage;
+import org.openqa.selenium.WebDriver;
+import pages.Amazon.BasePage;
 
-public class RzkElemFatCat extends BasePage(){
-    public RzkElemFatCat(WebDriver driver) { super(driver); }
-    public void navigate () { driver.get ("https://rozetka.com.ua/ua/"); }
+public class RzkElemFatCat extends BasePage {
+    public RzkElemFatCat(WebDriver driver) {
+        super(driver);
+    }
 
-
-
+    public void navigate() {
+        driver.get("https://rozetka.com.ua/ua/");
+    }
 }
-
 

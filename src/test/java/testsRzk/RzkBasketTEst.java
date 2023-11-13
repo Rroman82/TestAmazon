@@ -1,14 +1,12 @@
-package rozetka.Tests;
+package testsRzk;
 
-import pageObject.test.TestInit;
-import rozetka.Pages.RozetHPElements;
+import org.openqa.selenium.support.ui.*;
+import testAmazon.TestInit;
+import pages.Rzk.RozetHPElements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -36,45 +34,48 @@ public class RzkBasketTEst extends TestInit {
 //        rozetka.navigate();
 //        new WebDriverWait(driver, Duration.ofSeconds(10)).until(elementtobeclickable(By.ByXPath))
     // }
-    {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
-        driver.findElement(By.id("adder")).click();
-        WebElement added = driver.findElement(By.id("box0"));
-    }
-
+    //____________
+//    {
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+//        driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
+//        driver.findElement(By.id("adder")).click();
+//        WebElement added = driver.findElement(By.id("box0"));
+//    }
+//_______________
 
     //explicitwait
-    {
-        WebElement revealed = driver.findElement(By.id("revealed");
-        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2))
+//    {
+//        WebElement revealed = driver.findElement(By.id("revealed"));
+//        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+//
+//        driver.findElement(By.id("reveal")).click();
+//        wait.until(d -> revealed.isDisplayed());
+//        revealed.sendKeys("Displayed");
+//    }
+    //____________
 
-        driver.findElement(By.id("reveal")).click();
-        wait.until(d -> revealed.isDisplayed());
-        revealed.sendKeys("Displayed");
-    }
-
-    {
-        WebElement revealed = driver.findElement(By.id("revealed"));
-        Wait<WebDriver> wait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(2))
-                .pollingEvery(Duration.ofMillis(300))
-                .ignoring(ElementNotInteractableException.class);
-
-        driver.findElement(By.id("reveal")).click();
-        wait.until(d -> {
-            revealed.sendKeys("Displayed");
-            return true;
-
-        })
-
-    }
+//    {
+//        WebElement revealed = driver.findElement(By.id("revealed"));
+//        Wait<WebDriver> wait = new FluentWait<>(driver)
+//                .withTimeout(Duration.ofSeconds(2))
+//                .pollingEvery(Duration.ofMillis(300))
+//                .ignoring(ElementNotInteractableException.class);
+//
+//        driver.findElement(By.id("reveal")).click();
+//        wait.until(d -> {
+//            revealed.sendKeys("Displayed");
+//            return true;
+//
+//        }
+//
+//    }
+    //___________________
 
     @Test
     public void getBasket2() {
         RozetHPElements rozetka = new RozetHPElements(driver);
         rozetka.navigate();
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(elementtobeclickable(By.ByXPath"//*[@class= 'header-actions__item header-actions__item--cart']"));
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class= 'header-actns__item header-actions__item--cart']")));
         rozetka.getCheckCatalog().click();
         rozetka.getCheckMonik().click();
         rozetka.getBtnBasket().click();

@@ -1,6 +1,6 @@
-package rozetka.Tests;
+package testsRzk;
 
-import pageObject.test.TestInit;
+import testAmazon.TestInit;
 
 public class Rzk2WindowsTest extends TestInit {
 

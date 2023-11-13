@@ -1,6 +1,6 @@
-package pageObject.test;
+package testAmazon;
 
-import pageObject.PageObject.AmazonHomePage;
+import pages.Amazon.AmazonHomePage;
 import org.testng.annotations.Test;
 
 public class TestWebDriver extends TestInit {

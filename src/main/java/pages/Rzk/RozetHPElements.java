@@ -1,6 +1,6 @@
-package rozetka.Pages;
+package pages.Rzk;
 
-import pageObject.PageObject.BasePage;
+import pages.Amazon.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,2 +1,7 @@
-package JavaUDemi;public class Proba {
+package javaUDemi;
+
+import testAmazon.TestInit;
+
+public class Proba extends TestInit{
+
 }

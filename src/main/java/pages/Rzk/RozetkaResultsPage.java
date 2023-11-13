@@ -1,4 +1,4 @@
-package rozetka.Pages;
+package pages.Rzk;
 
 public class RozetkaResultsPage {
 }
